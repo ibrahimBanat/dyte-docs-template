@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    app:
+        image: altibbi/docs:stg
+        restart: always
+        ports:
+            - "33316:80"
+        logging:
+            driver: "json-file"
+            options:
+                max-file: 10
+                max-size: 50m
